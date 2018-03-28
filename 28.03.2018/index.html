@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5 - Формы</title>
+    <style>
+        b.red {
+            color: red;
+        }
+        .crt {
+            position: absolute;
+            left: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Форма заявки на работу в зоопарке</h1>
+        <i>Пожалуйста заполните форму. Обязательные поля помечены <b class="red">*</b></i>
+    </div>
+    <br />
+    <div>
+        <form>
+            <fieldset>
+                <legend>Контактная информация</legend>
+                <p><span>Имя <b class="red">* </b> <input class="crt" type="text" /></span></p>
+                <p><span>Телефон <input class="crt" type="text" /></span></p>
+                <p><span>E-mail <b class="red">* </b> <input class="crt" type="email" /></span></p>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>Персональная информация</legend>
+                <p><span>Возраст <b class="red">* </b> <input class="crt" type="text" /></span></p>
+                <p><span>Пол 
+                    <select class="crt">
+                        <option disabled ="disabled" selected="selected">Выберите пол</option>
+                        <option>Мужчина</option>
+                        <option>Женщина</option>
+                    </select>
+                </span></p>
+                <p>
+                    Перечислите личные качества
+                    <textarea class="crt">
+                    </textarea>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Выбеите ваших любимых животных</legend>
+                <input type="checkbox" /> Зебра
+                <input type="checkbox" /> Кошак
+                <input type="checkbox" /> Анакода
+                <input type="checkbox" /> Человек
+                <br />
+                <br />
+                <input type="checkbox" /> Слон
+                <input type="checkbox" /> Антилопа
+                <input type="checkbox" /> Голубь
+                <input type="checkbox" /> Краб
+            </fieldset>
+            <input type="submit" value="Отправить информацию" />
+        </form>
+    </div>
+</body>
+</html>
