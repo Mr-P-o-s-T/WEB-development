@@ -3,9 +3,43 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Фігура і символіка Олімпійських ігор</title>
+    <style>
+        #mainFigure {
+            width: 400px;
+            height: 200px;
+            background-color: blue;
+            border-radius: 0 60px 0 60px;
+            position: absolute;
+        }
+        .circle {
+            width: 80px;
+            height: 80px;
+            background-color: grey;
+            border-radius: 40px;
+            position: absolute;
+        }
+        .ring {
+            width: 100px;
+            height: 100px;
+            border: solid;
+            border-width: 10px;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
-
+    <div id="mainFigure" style="top: 50px; left: 37%;">
+        <div class="circle" style="top: 10px; right: 10px"></div>
+        <div class="circle" style="bottom: 10px; left: 10px"></div>
+    </div>
+    <div style="position: absolute; top: 300px; left: 40%">
+        <div class="ring" style="border-color: blue;"></div>
+        <div class="ring" style="border-color: yellow; left: 48px; top: 82px"></div>
+        <div class="ring" style="border-color: black; left: 96px"></div>
+        <div class="ring" style="border-color: green; left: 144px; top: 82px"></div>
+        <div class="ring" style="border-color: red; left: 192px"></div>
+    </div>
 </body>
 </html>
