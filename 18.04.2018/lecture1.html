@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Псевдокласи, псевдоелементи, комбінатори...</title>
+    <style>
+        #poshelNAHUI {
+            text-align: center;
+        }
+        p:lang(fr) {color: green}
+        :checked {background-color: blue}
+        div:not(.two) {color: red}
+        ol li {background-color: cadetblue}
+        ol>li {
+            background-color: blue
+        }
+        h1+p {background-color: yellow}
+        p[align="center"] {color:blueviolet}
+    </style>
+</head>
+<body lang="fr">
+    <div>
+        Псевдоелементи вкористовуються для зверненя до окремих частин елементів
+        Псевдокласи дозволяють стилям розрізняти різні типи елементів. Діляться на наступні групи:
+        - динамічні
+        - псводкласи цілей
+        - псевдокласи мови
+        - псевдокласи станів елементів інтерфейсу
+        - псевдокласи заперечення
+        - структурні
+    </div>
+    <div id="poshelNAHUI">
+        Динамічні - X:link(...) { color: red; (...) }
+        :link
+        :visited
+        :active
+        :hover
+        :focus
+    </div>
+    <div>
+        Цілей - X:target { ... }
+    </div>
+    <div>
+        Мови - X:lang(tr)
+        <p>safdlh;d</p> => p:lang(fr) { color.red }
+    </div>
+    <div>
+        Станів елеметів інтерфейсу - X:enabled
+        :disabled
+        :checked
+        <input type="radio" />
+    </div>
+    <div class="two">
+        Заперечння - X:not(S)
+        <div class="one">adss</div>
+        <div class="two">fsasa</div>
+        <div class="three">afsgdsa</div>
+    </div>
+    <div>
+        Комбінатори - призначені для об'єнання різних селекторів.
+        Комбінатор потомків відповідає елементу Y який є потомком Х. Комбінатор обирає всіх потомків, а не лише прямих.
+        Форма запису:
+        <ul>
+            <li>a</li>
+            <li>
+                <ol>
+                    <li>a</li>
+                    <li>a</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div>
+        Комбінатор прямих потомків X>Y відповідає елемнту Y який є прямим потомком елементу Х
+    </div>
+    <div>
+        Комбінатор суміжних родичів X+Y відповідає елменту Y якй безпосередньо передує елементу Х. Лише перший елемент Y буде обраний.
+    </div>
+    <h1>a</h1>
+    <p>a</p>
+    <p align="right">a</p>
+    <p align="center">a</p>
+    <div>
+        Загальний комбінатор родичів X~Y відповідає елементу Y якому передує Х. Усі сусіди будуть обрані.
+        h1~p {background-color: saddlebrown}
+    </div>
+    <div>
+        Селектори атрибутів відповідає елемену (або селектору) з атрибутом f
+        X[f]
+        або X[f="ex"] якщо атрибут має значення "ex"
+        або X[f^="ex"] якщо атрибут з значенням, що починається рядка "ex"
+        або X[f$="ex"] якщо атрибут з заченням, що закінується рядком "ex"
+        або X[f*="ex"] якщо атрибут з значенням, що містить рядок "ex"
+        або X[f|="ex"] якщо атрибут з значенням у вигляді списку що розділені "-" і починаються з "ex"
+        або X[f~="ex"] якщо атрибут з значенням у вигляді списку що розділені " " і починаються з "ex"
+    </div>
+</body>
+</html>
