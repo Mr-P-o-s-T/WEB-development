@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 2</title>
+
+</head>
+<body>
+    <script>
+        function distance(x1, y1 , x2, y2) {
+            var xdiff = x2 - x1;
+            var ydiff = y2 - y1;
+            return Math.pow((xdiff * xdiff + ydiff * ydiff), 0.5);
+        }
+
+        function check(x1, y1, x2, y2) {
+            if (((Math.abs(x1) < 0.0001) && (Math.abs(y1) < 0.0001)) && ((Math.abs(x2) < 0.0001) && (Math.abs(y2) < 0.0001))) {
+                alert(String("Both point are in coordinate center..."));
+            }
+            else if (((x1 * x2) > 0) && ((y1 * y2) > 0)) {
+                if (x1 > 0) {
+                    if (y1 > 0) form.answer.value = alert(String("1st quarter"));
+                    else alert(String("4th quarter"));
+                }
+                else {
+                    if (y1 > 0) form.answer.value = alert(String("2nd quarter"));
+                    else alert(String("3rd quarter"));
+                }
+            }
+            else alert(String("Distance is " + distance(x1, y1, x2, y2)));
+        }
+
+        check(0.0, 0.0, -1.0, 1.0)
+    </script>
+</body>
+</html>

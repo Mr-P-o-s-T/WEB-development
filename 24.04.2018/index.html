@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>24.04.2018</title>
+    <style>
+        .box, .redArrow, .rectangle {
+            position: absolute;
+            margin: 10px;
+            width: 0px;
+            height: 0px;
+            border: 30px solid transparent;
+        }
+
+        .box {
+            border-left-color: green;
+            border-top-color: lawngreen;
+            border-right-color: deepskyblue;
+            border-bottom-color: darkslateblue;
+        }
+
+        .redArrow {
+            border-right: 43px solid orange;
+            margin-left: 60px;
+        }
+
+        .strape {
+            margin: 25px;
+            margin-left: 160px;
+            position: absolute;
+            background-color: red;
+            width: 100px;
+            height: 30px;
+        }
+
+            .strape::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: -15px;
+                z-index: -1;
+                width: 0px;
+                height: 0px;
+                border: 15px solid transparent;
+                border-left: 0px solid transparent;
+                border-right: 30px solid darkred;
+            }
+
+            .strape::after {
+                content: "";
+                position: absolute;
+                left: 100px;
+                width: 0px;
+                height: 0px;
+                border: 15px solid transparent;
+                border-left: 15px solid red;
+            }
+
+        .infoBox {
+            margin: 25px;
+            margin-left: 300px;
+            position: absolute;
+            width: 120px;
+            height: 60px;
+            background-color: lightskyblue;
+            border-radius: 10px;
+        }
+
+            .infoBox:before {
+                content: "";
+                position: absolute;
+                left: 48px;
+                top: -24px;
+                width: 0px;
+                height: 0px;
+                border: 12px solid transparent;
+                border-bottom: 12px solid lightskyblue;
+            }
+
+        .borderedInfoBox {
+            text-align: center;
+            margin: 25px;
+            margin-left: 500px;
+            position: absolute;
+            width: 120px;
+            height: 60px;
+            background-color: lightskyblue;
+            border: 3px solid dodgerblue;
+            border-radius: 10px;
+        }
+
+            .borderedInfoBox:before {
+                content: "";
+                position: absolute;
+                left: 48px;
+                bottom: -24px;
+                width: 0px;
+                height: 0px;
+                border: 12px solid transparent;
+                border-top: 10px solid dodgerblue;
+            }
+
+            .borderedInfoBox:after {
+                content: "";
+                position: absolute;
+                left: 48px;
+                bottom: -20px;
+                width: 0px;
+                height: 0px;
+                border: 12px solid transparent;
+                border-top: 10px solid lightskyblue;
+            }
+
+        .threeDot {
+            color: white;
+            vertical-align: central;
+            font-size: 49px;
+        }
+
+        .rectangle {
+            position: absolute;
+            margin: 100px;
+            margin-left: 200px;
+            width: 0px;
+            height: 0px;
+            border-left: 30px solid red;
+            border-top: 30px solid lightcoral;
+            border-bottom: 10px solid red;
+            border-right: 30px solid red;
+        }
+
+        .complRect {
+            position: absolute;
+            margin: 200px;
+            margin-left: 100px;
+            width: 0px;
+            height: 0px;
+            border-left: 30px solid orange;
+            border-top: 30px solid lightcoral;
+            border-bottom: 30px solid red;
+            border-right: 30px solid coral;
+        }
+
+            .complRect:before {
+                content: '';
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                left: 30px;
+                top: -30px;
+                border-left: 10px solid coral;
+                border-top: 30px solid coral;
+                border-bottom: 30px solid red;
+                border-right: 10px solid red;
+            }
+
+            .complRect:after {
+                content: "";
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                top: -30px;
+                left: -10px;
+                border-left: 30px solid transparent;
+                border-top: 30px solid transparent;
+                border-bottom: 30px solid red;
+                border-right: 30px solid red;
+            }
+
+        .voiletStrape {
+            margin: 200px;
+            margin-left: 300px;
+            position: absolute;
+            background-color: mediumvioletred;
+            width: 100px;
+            height: 30px;
+        }
+
+            .voiletStrape::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: 1;
+                width: 0px;
+                height: 0px;
+                border: 15px solid transparent;
+                border-left: 15px solid white;
+            }
+
+            .voiletStrape::after {
+                content: "";
+                position: absolute;
+                right: 0px;
+                width: 0px;
+                height: 0px;
+                bottom: -25px;
+                border: 15px solid transparent;
+                border-left: 5px solid transparent;
+                border-right: 15px solid transparent;
+                border-top: 10px solid darkred;
+            }
+
+        .darkVoiletStrape {
+            margin: 200px;
+            margin-left: 500px;
+            position: absolute;
+            background-color: darkviolet;
+            width: 100px;
+            height: 30px;
+        }
+
+            .darkVoiletStrape::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: 1;
+                width: 0px;
+                height: 0px;
+                border-left: 15px solid lightsteelblue;
+                border-right: 15px solid darkviolet;
+                border-top: 30px solid blueviolet;
+                border-bottom: 0px solid transparent;
+            }
+
+            .darkVoiletStrape::after {
+                content: "";
+                position: absolute;
+                right: -30px;
+                width: 0px;
+                height: 0px;
+                border: 15px solid transparent;
+                border-left: 15px solid violet;
+            }
+    </style>
+</head><body>
+    <div class="box"></div>
+    <div class="redArrow"></div>
+    <div class="strape"></div>
+    <div class="infoBox"></div>
+    <div class="borderedInfoBox"><span class="threeDot">&#9679&#9679&#9679</span></div>
+    <div class="rectangle"></div>
+    <div class="complRect"></div>
+    <div class="voiletStrape"></div>
+    <div class="darkVoiletStrape"></div>
+</body>
+</html>

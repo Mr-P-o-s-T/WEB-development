@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Модуль 1</title>
+    <style>
+        #menu {
+            left: 0px;
+            top: 0px;
+            margin: 0px;
+            width: 20%;
+            height: 100vh;
+            position: absolute;
+            background-color: mediumpurple;
+        }
+        .picture {
+            width: 75%;
+            margin: 5%;
+            position: absolute;
+            right: 0px;
+        }
+
+        #pic1 {
+            width: 16%;
+            height: 15%;
+            margin-right: 42%;
+        }
+
+        #pic2 {
+            top: 20%;
+            height: 15%;
+        }
+
+        #pic3 {
+            top: 40%;
+            height: 15%;
+        }
+
+        #pic4 {
+            top: 60%;
+            height: 15%;
+        }
+
+        #pic5 {
+            top: 80%;
+            height: 15%;
+        }
+
+        #mainPic {
+            width: 95%;
+            margin-left: 0px;
+            position: static;
+        }
+
+        .mainScreen {
+            left: 0px;
+            top: 0px;
+            overflow: auto;
+            margin: 0px;
+            position: absolute;
+            width: 75%;
+            height: 100vh;
+            margin-left: 25%;
+        }
+
+        .column {
+            top: 60%;
+            margin: 0px;
+            width: 40%;
+            position: absolute;
+            text-align: justify;
+        }
+
+        #col1 {
+            left: 0%;
+            color: red;
+        }
+
+        #col2 {
+            left: 55%;
+
+        }
+
+        #line1 {
+            opacity: 0.5;
+            z-index: 1;
+            position: fixed;
+            left: -50%;
+            top: -10%;
+            width: 200%;
+            height: 20%;
+            background-color: darkslateblue;
+            transform: rotate(-2deg);
+        }
+
+        #line2 {
+            opacity: 0.5;
+            z-index: 1;
+            position: fixed;
+            left: -50%;
+            bottom: -10%;
+            width: 200%;
+            height: 20%;
+            background-color: darkslateblue;
+            transform: rotate(-2deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="line1"></div>
+    <menu id="menu">
+        <img id="pic1" class="picture" src="П.jpg" />
+        <img id="pic2" class="picture" src="П.jpg" />
+        <img id="pic3" class="picture" src="П.jpg" />
+        <img id="pic4" class="picture" src="П.jpg" />
+        <img id="pic5" class="picture" src="П.jpg" />
+    </menu>
+    <div class="mainScreen">
+        <div>
+            TextSampleTextSampleTextSampleTextSampleTextSampleTextSample            TextSampleTextSampleTextSampleTextSampleTextSampleTextSample            TextSampleTextSampleTextSampleTextSampleTextSampleTextSample            TextSampleTextSampleTextSampleTextSampleTextSampleTextSample            TextSampleTextSampleTextSampleTextSampleTextSampleTextSample
+        </div>
+        <img id="mainPic" class="picture" src="П.jpg" />
+        <div style="position: relative">
+            <div id="col1" class="column">
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+            </div>
+            <div id="col2" class="column">
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+                TextSample TextSample TextSample TextSample TextSample TextSample
+            </div>
+        </div>
+    </div>
+    <div id="line2"></div>
+</body>
+</html>
