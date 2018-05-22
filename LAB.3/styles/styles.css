@@ -1,0 +1,404 @@
+﻿/*Cross platform font adding*/
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0KExQ.woff2) format('woff2');
+}
+
+/*Internet Explorer font adding*/
+@font-face {
+    font-family: 'PT Sans';
+    src: url('PTSans-Regular.eot');
+}
+
+/*Resetting all margins and paddings*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Common settings*/
+html, body {
+    height: 100%;
+    min-height: 100%;
+    font-family: 'PT Sans';
+    background-color: #f7f7f6;
+}
+
+#wrap {
+    min-height: calc(100% - 200px);
+    position: relative;
+}
+
+    /*Centerer of content for all site`s parts*/
+.centerer {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: #f7f7f6;
+}
+
+a:not(.infoLink) {
+    color: #bebab5;
+}
+
+content, footer {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+header .telNumbers, content {
+    color: #020104;
+}
+
+header, menu, footer {
+    width: 100%;
+}
+
+menu ul li, footer ul li {
+    color: #f7f7f6;
+}
+
+/*Feedback form settings*/
+.feedbackBackground {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #22232A;
+}
+
+.feedbackScreen {
+    display: none;
+    z-index: 1;
+    text-align: center;
+    justify-content: center;
+    background-color: #f7f7f6;
+    width: 300px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 300px;
+    margin: 0px auto 0px auto;
+    padding: 10px 0px 0px 0px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+    .feedbackScreen input {
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    .feedbackScreen textarea {
+        font-size: 20px;
+        resize: vertical;
+        display: block;
+        border-radius: 5px;
+    }
+
+    .feedbackScreen button {
+        color: #f7f7f6;
+        background-color: #bebab5;
+        height: 10%;
+        width: 50%;
+        border-radius: 5px;
+        margin: 30px;
+    }
+
+/*Header settings*/
+header {
+    background-color: #bebab5;
+    position: relative;
+    height: 230px;
+}
+
+    header img {
+        position: relative;
+        top: 50px;
+        right: 200px;
+    }
+
+    header .telNumbers {
+        text-align: right;
+        font-size: 40px;
+        position: relative;
+        top: 45px;
+        left: 200px;
+    }
+
+    header .telNumbers > a {
+        font-size: 20px;
+        font-weight: bold;
+        color: #020104;
+        text-align: right;
+        text-decoration-style: dashed;
+    }
+
+/*Slider settings*/
+slider {
+    margin: 1px;
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    display: none;
+}
+
+    /*Buttons settings*/
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: 150px;
+    padding: 16px;
+    color: white;
+    height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@media (max-width: 1500px) {
+    slider img {
+        display: none;
+    }
+
+    .prev, .next {
+        display: none;
+    }
+}
+
+/*Menu settings*/
+menu {
+    background-color: #22232A;
+    position: relative;
+    height: 80px;
+}
+
+    menu nav {
+        font-size: 30px;
+        position: relative;
+        top: 20px;
+    }
+
+        menu nav > ul > li {
+            margin: 0 20px 0 20px;
+            display: inline;
+        }
+
+        menu nav > ul > li a {
+            text-decoration: none;
+        }
+
+            menu nav > ul > li a:hover {
+                text-decoration: underline;
+            }
+
+/*Content settings*/
+content {
+    position: relative;
+    top: 20px;
+    text-align: left;
+}
+
+    content #path {
+        font-size: 20px;
+        width: 980px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+    }
+
+    content .infoBox, content .leftContent {
+        background-color: #46413B;
+        position: relative;
+        top: 40px;
+        width: 350px;
+        height: 650px;
+        border-bottom: 150px solid #f7f7f6;
+    }
+
+    content .leftContent {
+        font-size: 20px;
+    }
+
+        content .infoBox > .infoCaption, content .leftContent > .mainListCaption {
+            font-size: 40px;
+            font-weight: bold;
+            color: #bebab5;
+            position: relative;
+            top: 25px;
+            left: 35px;
+        }
+
+        content .infoBox > .infoContent, content .leftContent > .mainList {
+            color: #f7f7f6;
+            position: relative;
+            top: 70px;
+            left: 35px;
+            width: 265px;
+        }
+
+        content .leftContent > .mainList {
+            list-style-type: none;
+            font-weight: 900;
+        }
+
+            content .leftContent > .mainList a {
+                text-decoration: none;
+            }
+
+                content .leftContent > .mainList a:hover {
+                    text-decoration: underline;
+                }
+
+        content .leftContent .subList {
+            font-size: 14px;
+            font-weight: initial;
+            display: none;
+            position: relative;
+            list-style-type: disc;
+            left: 20px;
+        }
+
+    content .descriptCaption {
+        font-size: 40px;
+        font-weight: bold;
+        position: relative;
+        top: 65px;
+        left: 50px;
+    }
+
+    content .description, content .centerContent {
+        position: relative;
+        left: 50px;
+        top: 110px;
+        width: 569px;
+    }
+
+    content .centerContent {
+        font-size: 16px;
+        display: none;
+        position: relative;
+        top: 65px;
+    }
+
+        .centerContent .itemGrid {
+            font-size: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        content .centerContent .item {
+            text-align: left;
+            font-size: 15px;
+            background-color: #bebab5;
+            width: 100px;
+            padding: 15px;
+            margin: 5px;
+        }
+
+        .item .itemPict {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 5px;
+            opacity: 0.5;
+        }
+
+        .item .itemLink {
+            text-decoration: none;
+            color: #020104;
+            font-weight: bold;
+        }
+            .item .itemLink:hover {
+                text-decoration: underline;
+                color: #020104;
+                font-weight: bold;
+            }
+
+        .item p {
+            font-size: 12px;
+        }
+
+    .centerContent .line {
+        margin-top: 50px;
+        border-top: 2px solid #22232A;
+    }
+
+    .centerContent #leftText, .centerContent #rightText {
+        padding: 10px 25px 0px 0px;
+        float: left;
+        width: 50%;
+        height: 50%;
+    }
+
+    .centerContent #rightText {
+        padding: 10px 0px 0px 25px;
+        margin-left: 50%;
+        float: none;
+    }
+
+/*Footer settings*/
+footer {
+    background-color: #22232A;
+    color: #bebab5;
+    line-height: 100%;
+    position: relative;
+    height: 200px;
+}
+
+    footer .copyright {
+        position: relative;
+        top: 65px;
+        right: 200px;
+    }
+
+    footer .mainPart {
+        text-decoration: underline;
+        position: relative;
+        top: 65px;
+    }
+
+        footer .mainPart > ul {
+            list-style-type: none;
+        }
+
+    footer img {
+        position: relative;
+        top: 65px;
+        left: 180px;
+        height: 70px;
+    }
+
+    footer .development {
+        position: relative;
+        top: 65px;
+        left: 200px;
+    }

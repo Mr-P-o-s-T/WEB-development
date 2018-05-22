@@ -1,0 +1,207 @@
+﻿/*Cross platform font adding*/
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0KExQ.woff2) format('woff2');
+}
+
+/*Internet Explorer font adding*/
+@font-face {
+    font-family: 'PT Sans';
+    src: url('PTSans-Regular.eot');
+}
+
+/*Resetting all margins and paddings*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Common settings*/
+html, body {
+    height: 100%;
+    min-height: 100%;
+    font-family: 'PT Sans';
+    background-color: #f7f7f6;
+}
+
+#wrap {
+    min-height: calc(100% - 200px);
+    position: relative;
+}
+
+/*Centerer of content for all site`s parts*/
+.centerer {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: #f7f7f6;
+}
+
+a:not(.infoLink) {
+    color: #bebab5;
+}
+
+content, footer {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+header .telNumbers, content {
+    color: #020104;
+}
+
+header, menu, footer {
+    width: 100%;
+}
+
+menu ul li, footer ul li {
+    color: #f7f7f6;
+}
+
+/*Header settings*/
+header {
+    background-color: #bebab5;
+    position: relative;
+    height: 230px;
+}
+
+    header img {
+        position: relative;
+        top: 65px;
+        right: 200px;
+    }
+
+    header .telNumbers {
+        font-size: 40px;
+        position: relative;
+        top: 65px;
+        left: 200px;
+    }
+
+/*Slider settings*/
+slider {
+    margin: 1px;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 1500px) {
+    slider img {
+        display: none;
+    }
+}
+
+/*Menu settings*/
+menu {
+    background-color: #22232A;
+    position: relative;
+    height: 80px;
+}
+
+    menu nav {
+        font-size: 30px;
+        position: relative;
+        top: 20px;
+    }
+
+        menu nav > ul > li {
+            margin: 0 20px 0 20px;
+            display: inline;
+        }
+
+        menu nav > ul > li a {
+            text-decoration: none;
+        }
+
+            menu nav > ul > li a:hover {
+                text-decoration: underline;
+            }
+
+/*Content settings*/
+content {
+    position: relative;
+    top: 20px;
+    text-align: left;
+}
+    content .infoBox {
+        background-color: #46413B;
+        position: relative;
+        top: 40px;
+        width: 350px;
+        height: 650px;
+        border-bottom: 150px solid #f7f7f6;
+    }
+
+        content .infoBox > .infoCaption {
+            font-size: 40px;
+            font-weight: bold;
+            color: #bebab5;
+            position: relative;
+            top: 25px;
+            left: 35px;
+        }
+
+        content .infoBox > .infoContent {
+            color: #f7f7f6;
+            position: relative;
+            top: 70px;
+            left: 35px;
+            width: 265px;
+        }
+
+    content .descriptCaption {
+        font-size: 40px;
+        font-weight: bold;
+        position: relative;
+        top: 65px;
+        left: 50px;
+    }
+
+    content .description {
+        position: relative;
+        left: 50px;
+        top: 110px;
+        width: 569px;
+    }
+
+/*Footer settings*/
+footer {
+    background-color: #22232A;
+    color: #bebab5;
+    line-height: 100%;
+    position: relative;
+    height: 200px;
+}
+
+    footer .copyright {
+        position: relative;
+        top: 65px;
+        right: 200px;
+    }
+
+    footer .mainPart {
+        text-decoration: underline;
+        position: relative;
+        top: 65px;
+    }
+
+        footer .mainPart > ul {
+            list-style-type: none;
+        }
+
+    footer img {
+        position: relative;
+        top: 65px;
+        left: 180px;
+        height: 70px;
+    }
+
+    footer .development {
+        position: relative;
+        top: 65px;
+        left: 200px;
+    }

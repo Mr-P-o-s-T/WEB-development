@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css">
+    <script src="../scripts/feedback.js" type="text/javascript">
+    </script>
+    <script src="../scripts/list.js">
+    </script>
+    <title>SHELL Corp.</title>
+</head>
+<body>
+    <div class="feedbackBackground fade" onclick="feedbackProcessing(event)">
+    </div>
+    <div class="feedbackScreen fade">
+        <form>
+            Name *<br />
+            <input name="name" type="text" required /><br />
+            Phone *<br />
+            <input name="phone" type="tel" required /><br />
+            E-mail *<br />
+            <input name="mail" type="email" required /><br />
+            Message<br />
+            <textarea name="message" maxlength="1000" rows="5"
+                      placeholder="Write your message here..."></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <div id="wrap">
+        <header>
+            <div class="centerer">
+                <img src="../images/logo.png" width="346" height="105" alt="HESH Corp. logo" />
+                <div class="telNumbers">
+                    +25 (623) 456-78-90<br />
+                    +25 (800) 555-35-35<br />
+                    <a onclick="feedbackProcessing()" href="#">Feedback</a>
+                </div>
+            </div>
+        </header>
+
+        <menu>
+            <div class="centerer">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="individuals.html">For individuals</a></li>
+                        <li><a href="#">For legal entities</a></li>
+                        <li><a href="#">Our production</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </menu>
+
+        <slider>
+            <div class="centerer">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <div class="slides fade">
+                    <img src="../images/slider1.png" width="1500" height="400" alt="HESH Corp. slider logo" />
+                </div>
+                <div class="slides fade">
+                    <img src="../images/slider2.png" width="1500" height="400" alt="HESH Corp. slider logo" />
+                </div>
+                <div class="slides fade">
+                    <img src="../images/slider3.png" width="1500" height="400" alt="HESH Corp. slider logo" />
+                </div>
+                <div class="slides fade">
+                    <img src="../images/slider4.png" width="1500" height="400" alt="HESH Corp. slider logo" />
+                </div>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </slider>
+
+        <script src="../scripts/slider.js">
+        </script>
+
+        <content>
+            <div id="path">
+                <a href="../index.html">Main</a> / For individuals
+            </div>
+            <div class="centerer">
+                <div class="leftContent">
+                    <div class="mainListCaption">
+                        <p>Catalogue:</p>
+                    </div>
+                    <ul class="mainList">
+                        <li><a class="mainListItem" href="#path" onclick="changeGroup(0)">Pistols</a></li>
+                        <li>
+                            <ul class="subList">
+                                <li><a href="#path" onclick="changeClass(0)">Caliber .22</a></li>
+                                <li><a href="#path" onclick="changeClass(1)">Caliber .30</a></li>
+                                <li><a href="#path" onclick="changeClass(2)">Caliber .45</a></li>
+                                <li><a href="#path" onclick="changeClass(3)">Caliber .50</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="mainListItem" href="#path" onclick="changeGroup(1)">SMGs</a></li>
+                        <li>
+                            <ul class="subList">
+                                <li><a href="#path" onclick="changeClass(0)">Caliber .22</a></li>
+                                <li><a href="#path" onclick="changeClass(1)">Caliber .30</a></li>
+                                <li><a href="#path" onclick="changeClass(2)">Caliber .45</a></li>
+                                <li><a href="#path" onclick="changeClass(3)">Caliber .50</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="mainListItem" href="#path" onclick="changeGroup(2)">Rifles</a></li>
+                        <li>
+                            <ul class="subList">
+                                <li><a href="#path" onclick="changeClass(0)">Caliber .22</a></li>
+                                <li><a href="#path" onclick="changeClass(1)">Caliber .30</a></li>
+                                <li><a href="#path" onclick="changeClass(2)">Caliber .45</a></li>
+                                <li><a href="#path" onclick="changeClass(3)">Caliber .50</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="mainListItem" href="#path" onclick="changeGroup(3)">Machineguns</a></li>
+                        <li>
+                            <ul class="subList">
+                                <li><a href="#path" onclick="changeClass(0)">Caliber .22</a></li>
+                                <li><a href="#path" onclick="changeClass(1)">Caliber .30</a></li>
+                                <li><a href="#path" onclick="changeClass(2)">Caliber .45</a></li>
+                                <li><a href="#path" onclick="changeClass(3)">Caliber .50</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="mainListItem" href="#path" onclick="changeGroup(4)">Sniper rifles</a></li>
+                        <li>
+                            <ul class="subList">
+                                <li><a href="#path" onclick="changeClass(0)">Caliber .22</a></li>
+                                <li><a href="#path" onclick="changeClass(1)">Caliber .30</a></li>
+                                <li><a href="#path" onclick="changeClass(2)">Caliber .45</a></li>
+                                <li><a href="#path" onclick="changeClass(3)">Caliber .50</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="centerContent">
+                    <div class="itemGrid">
+                        <div class="item">
+                            <a href="#"><img class="itemPict" src="../images/defAmmo.png" /></a>
+                            <a class="itemLink" href="#">Starter edition</a>
+                            <p>Price: $0.5 / bullet</p>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img class="itemPict" src="../images/defAmmo.png" /></a>
+                            <a class="itemLink" href="#">Medium edition</a>
+                            <p>Price: $1 / bullet</p>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img class="itemPict" src="../images/defAmmo.png" /></a>
+                            <a class="itemLink" href="#">Normal edition</a>
+                            <p>Price: $1.5 / bullet</p>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img class="itemPict" src="../images/defAmmo.png" /></a>
+                            <a class="itemLink" href="#">Elite edition</a>
+                            <p>Price: $2 / bullet</p>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img class="itemPict" src="../images/defAmmo.png" /></a>
+                            <a class="itemLink" href="#">Overpowered edition</a>
+                            <p>Price: $3 / bullet</p>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div id="leftText">
+                            Our company is a new player on weapoonary and ammunition market. We offer lots of ammunition for individual customers, legal entities and will be glad to make attempts in cooperation with goverments.
+                        </div>
+                        <div id="rightText">
+                            We offer many kinds of shells like: caliber and subcaliber AP-shells, HE- and HEAT-shells AT guided missiles. If you have no armored vehicles, our company offers you many sorts of bullets of different calibers for pistols, subautomatic and automatic rifles, machineguns etc.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="centerContent" style="display: block">
+                    <div class="itemGrid">Choose category</div>
+                    <div class="line">
+                        <div id="leftText">
+                            Our company is a new player on weapoonary and ammunition market. We offer lots of ammunition for individual customers, legal entities and will be glad to make attempts in cooperation with goverments.
+                        </div>
+                        <div id="rightText">
+                            We offer many kinds of shells like: caliber and subcaliber AP-shells, HE- and HEAT-shells AT guided missiles. If you have no armored vehicles, our company offers you many sorts of bullets of different calibers for pistols, subautomatic and automatic rifles, machineguns etc.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </content>
+    </div>
+
+    <footer>
+        <div class="centerer">
+            <div class="copyright">
+                <p>
+                    heshcorporation@heshcorp.org
+                </p><br />
+                <p>
+                    HESH Corporation UG
+                </p><br />
+                <p>
+                    2018. All rights are unreserved. (C)
+                </p>
+            </div>
+            <div class="mainPart">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="individuals.html">For individuals</a></li>
+                    <li><a href="#">For legal entities</a></li>
+                    <li><a href="#">Our production</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+            <img src="../images/bang.png" alt="HESH Corp. mini-logo" />
+            <div class="development">
+                <p>Site development:</p>
+                <br />
+                <p>Popovich O.</p>
+                <br />
+                <p>2nd course, group K-29</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
