@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function add(x, y) {
+            return x + y;
+        }
+
+        function subtract(x, y) {
+            return x - y;
+        }
+
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        function divide(x, y) {
+            if (y === 0.0) return x / y;
+            else return x;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input id="x" type="text" />
+        <input id="y" type="text" />
+        <input class="operation" name="operaions" type="radio" value="plus" checked="checked" />
+        <input class="operation" name="operaions" type="radio" value="minus" />
+        <input class="operation" name="operaions" type="radio" value="mult" />
+        <input class="operation" name="operaions" type="radio" value="divide" />
+        <input type="button" value="Result" onclick="onClick()" />
+    </form>
+    <script>
+        function onClick() {
+            var operation = document.getElementsByClassName('operation');
+            var tX = document.getElementById('x');
+            var tY = document.getElementById('y');
+            x = parseFloat(tX.value);
+            y = parseFloat(tY.value);
+            if (operation[0].checked) alert(add(x, y));
+            else if (operation[1].checked) alert(subtract(x, y));
+            else if (operation[2].checked) alert(multiply(x, y));
+            else {
+                var res = divide(x, y);
+                if (res === x) alert(res);
+                else alert('Division by zero');
+            }
+        }
+    </script>
+</body>
+</html>

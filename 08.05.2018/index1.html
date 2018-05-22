@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 1</title>
+    
+    <style>
+        .chessWrap {
+            border: solid black 1px;
+        }
+
+        .chessItem {
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+
+        .chessItemBlack {
+            background: #111;
+        }
+    </style>
+</head>
+<body>
+    <div class="chessWrap"> </div>
+    <script>
+        function build(m, n) {
+            var chessWrap = document.querySelector('.chessWrap');
+
+            chessWrap.setAttribute("style", "width: " + 50 * m + "px; height: "+ 50 * n + "px");
+            var i = 0, count = 0;
+
+            while (count < m * n) {
+                var item = document.createElement('div');
+                chessWrap.appendChild(item);
+
+                item.classList.add('chessItem');
+
+                if (i && i % 2)
+                    item.classList.add('chessItemBlack')
+
+                i += ((i + 2) % (m + 1)) ? 1 : 2;
+                count++;
+            }
+        }
+
+        build(12, 9)
+    </script>
+</body>
+</html>

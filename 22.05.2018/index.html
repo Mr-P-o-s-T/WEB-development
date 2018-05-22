@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Form</title>
+    <style>
+        table {
+            width: 50%;
+        }
+
+        table .rightAlligned {
+            text-align: right;
+        }
+    </style>
+    <script src="js.js">
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                Замовлення на придбання товару
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Назва товару
+                <br />
+                <select id="bookList">
+                    <option hidden="hidden">Виберіть книгу</option>
+                    <option value="10.5">Петренко. Кібенетика - 10,5</option>
+                    <option value="11.5">Іваненко. Основи програмуваня - 11,5</option>
+                    <option value="12.5">Граченко. Дискретна математика - 12,5</option>
+                    <option value="13.5">Самойленко. Математичний аналіз - 13,5</option>
+                    <option value="14.5">Шпаченко. Аналіз даних - безцінно</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Кількість: <input id="count" type="number" />
+                Вартість замовлених книг: <input id="currPrice" type="number" disabled="disabled" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Спосіб доставки замовлення<br />
+                <input id="post" type="radio" name="deliveryType" />Поштою<br />
+                <input id="deiveryBoy" type="radio" name="deliveryType" />Доставка до дому<br />
+                <input id="packed" type="checkbox" />У святковій упаковці
+            </td>
+        </tr>
+        <tr>
+            <td class="rightAlligned">
+                Загальна вартість замовлення
+                <input id="totalPrice" type="number" disabled="disabled" /> 
+                <button>Підрахувати</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Дані замовника
+                <br />
+                Ім'я:<input type="text" />
+                Адреса:<input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td class="rightAlligned">
+                <input type="button" value="Відновити початкові значення полів" onclick="clear()">
+                <button>Відіслати дані</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
